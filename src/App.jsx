@@ -11,8 +11,6 @@ function App() {
   )
 }
 
-/// jsjh\shnsad
-//asldmsaldm
 
 
 export default App;
