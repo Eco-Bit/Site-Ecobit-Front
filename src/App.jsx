@@ -2,15 +2,8 @@ import AppRoutes from "./Routes";
 
 function App() {
 
-<<<<<<< HEAD
-
-
-
-  //teste2 
-
-  //teste merge
-=======
->>>>>>> teste
+  //teste2
+  //
   return (
     <div className="app">
       <AppRoutes/>
