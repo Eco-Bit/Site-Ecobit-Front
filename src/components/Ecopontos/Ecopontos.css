@@ -1,0 +1,21 @@
+.ecopoint{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.all_content{
+    background-color: #fffafa;
+    margin: 20px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.saturday{
+    color:red;
+}
+
+.ecopoint_name{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
