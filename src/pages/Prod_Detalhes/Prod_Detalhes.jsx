@@ -14,19 +14,23 @@ function Prod_Detalhes() {
   const [doacao, setDoacao] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const id = localStorage.getItem("id");
+    if (id !== null) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchDoacao = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/getDoaId/${id}`
-        );
+        const response = await axios.get(`http://localhost:8080/getDoaId/${id}`);
         setDoacao(response.data);
       } catch (error) {
         console.error("Erro ao buscar a doação:", error);
-        setError(
-          "Erro ao buscar a doação. Por favor, tente novamente mais tarde."
-        );
+        setError("Erro ao buscar a doação. Por favor, tente novamente mais tarde.");
       } finally {
         setLoading(false);
       }
@@ -50,11 +54,7 @@ function Prod_Detalhes() {
         <div className="prod-card">
           <div className="prod-card-content">
             <div className="prod-carousel-container">
-              <Carousel
-                showThumbs={false}
-                infiniteLoop={true}
-                showStatus={false}
-              >
+              <Carousel showThumbs={false} infiniteLoop={true} showStatus={false}>
                 {doacao.imagensBase64.map((base64, index) => (
                   <img
                     key={index}
@@ -87,7 +87,7 @@ function Prod_Detalhes() {
           </div>
         </div>
       </div>
-      <FloatingButton />
+      {isLoggedIn && <FloatingButton />}
       <Footer />
     </div>
   );
