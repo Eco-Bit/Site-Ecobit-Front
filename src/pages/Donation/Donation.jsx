@@ -62,7 +62,7 @@ function Donation() {
         <div className='product-container'>
           {doacoes.map(doacao => (
             <div key={doacao.id} className='product-card'>
-              {isLoggedIn && localStorage.getItem('id') === "665b8ab700c45758228ec303" && <DeleteButton id={doacao.id} />} {/* Adicionado verificação de isLoggedIn */}
+              {isLoggedIn && localStorage.getItem('id') === "665f5e2c1ddca82b275a70eb" && <DeleteButton id={doacao.id} />} {/* Adicionado verificação de isLoggedIn */}
               <NavLink to={`/Prod_Detalhes/${doacao.id}`}>
                 <div className="image-wrapper">
                   {doacao.imagensBase64.map((base64, index) => (

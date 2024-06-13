@@ -31,7 +31,7 @@ function EcoNav() {
   useEffect(() => {
     const id = localStorage.getItem("id");
     setIsLoggedIn(!!id);
-    if (id === "665b8ab700c45758228ec303") {
+    if (id === "665f5e2c1ddca82b275a70eb") {
       setIsAdmin(true);
     }
 
@@ -97,7 +97,7 @@ function EcoNav() {
             {isLoggedIn ? (
               <div className="dropdown">
                 <button className="dropdown-toggle">
-                  <h2 className="user-name">{isAdmin ? "Administrador" : "Ola, " + userName}</h2>
+                  <h2 className="user-name">{isAdmin ? "Administrador" : "Olá, " + userName}</h2>
                 </button>
                 <div className="dropdown-menu">
                   <a href="/user/accountsettings" className="dropdown-item">

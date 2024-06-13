@@ -102,3 +102,17 @@
     font-style: italic; /* Deixa a nota em itálico */
     color: #37a82d; /* Cor diferente para destacar a nota */
 }
+
+.map-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: #ff0000; 
+}
+
+.map-error p {
+    margin-top: 10px;
+}

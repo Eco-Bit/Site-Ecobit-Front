@@ -30,7 +30,7 @@ function Home() {
   useEffect(() => {
     const id = localStorage.getItem("id");
     setIsLoggedIn(!!id);
-    if (id === "2") {
+    if (id === "665f5e2c1ddca82b275a70eb") {
       setIsAdmin(true);
     }
   }, []);

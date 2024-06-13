@@ -45,7 +45,7 @@ function Ecopontos() {
                 <div className='product-container'>
                     {pontos.map(ponto => (
                         <div className='product-card' key={ponto.id}>
-                            {localStorage.getItem('id') ==="665b8ab700c45758228ec303" && <DeleteButton id={ponto.id}/>}
+                            {localStorage.getItem('id') ==="665f5e2c1ddca82b275a70eb" && <DeleteButton id={ponto.id}/>}
                             <h2>{ponto.nomePonto}</h2>
                             <br></br>
                             <h3>Endereço:</h3>
