@@ -1,0 +1,106 @@
+[
+    {
+        "nomePonto": "Ecoponto Arco-Íris",
+        "endererecoPonto": "Rua Mozart, s/nº",
+        "numeroPonto": "09960-590",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Arraia",
+        "endererecoPonto": "Rua Arraia, 50",
+        "numeroPonto": "09972-070",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Marginal “Z”",
+        "endererecoPonto": "Avenida Daniel José de Carvalho, 330",
+        "numeroPonto": "09992-110",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Nações",
+        "endererecoPonto": "Rua Espanha c/ Avenida Dom João VI",
+        "numeroPonto": "09941-010",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Naval",
+        "endererecoPonto": "Rua Idealópolis c/ Avenida Corredor ABD, s/nº",
+        "numeroPonto": "09950-580",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Rufino",
+        "endererecoPonto": "Estrada do Rufino, 1.059",
+        "numeroPonto": "09980-280",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Yamagata",
+        "endererecoPonto": "Rua Yamagata c/ Rua Osaka, s/nº",
+        "numeroPonto": "09940-220",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto João Batista (Vila Nogueira)",
+        "endererecoPonto": "Rua João Batista Alves do Nascimento, 546",
+        "numeroPonto": "04905-020",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto DLU",
+        "endererecoPonto": "Avenida Pirâmide, 844",
+        "numeroPonto": "09970-330",
+        "materiaisPonto": "",
+        "abertoSabado": "* Aberto aos Sábados",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Caracas",
+        "endererecoPonto": "Rua Caracas, 120",
+        "numeroPonto": "09921-000",
+        "materiaisPonto": "",
+        "abertoSabado": "",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Nova Conquista",
+        "endererecoPonto": "Travessa ETCD, 210 – Vila Nova Conquista",
+        "numeroPonto": "09950-690",
+        "materiaisPonto": "",
+        "abertoSabado": "",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Okavango – Casa Grande",
+        "endererecoPonto": "Avenida Casa Grande, 1810",
+        "numeroPonto": "09960-590",
+        "materiaisPonto": "",
+        "abertoSabado": "",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    },
+    {
+        "nomePonto": "Ecoponto Maria Leonor – Parque Reid / Campanário",
+        "endererecoPonto": "Avenida Maria Leonor",
+        "numeroPonto": "09920-080",
+        "materiaisPonto": "",
+        "abertoSabado": "",
+        "_class": "com.example.Aulalab.Model.Ponto"
+    }
+]

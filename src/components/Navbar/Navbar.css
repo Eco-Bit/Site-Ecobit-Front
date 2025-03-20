@@ -1,0 +1,225 @@
+.custom-navbar {
+  background-color: #F5F6F8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  padding: 20px 0;
+  box-shadow: 0px 4px 13px -2px #000000;
+}
+
+.custom-navbar .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.custom-navbar .navbar-brand img {
+  width: 80px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-navbar .navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 12px;
+}
+
+.custom-navbar .nav-item {
+  margin: 0 10px;
+}
+
+.custom-navbar .nav-item:hover {
+  position: relative;
+}
+
+.custom-navbar .nav-item:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Ajuste para a linha ficar abaixo do texto */
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background-color: #BBB8B2; /* Cor da linha */
+  animation: expandLine 0.3s ease; /* Animação de expandir */
+}
+
+@keyframes expandLine {
+  from {
+    width: 0; /* Começa com largura zero */
+    left: 50%; /* Inicia a partir do centro */
+  }
+  to {
+    width: 100%; /* Expande até a largura total */
+    left: 0; /* Retorna para a posição inicial */
+  }
+}
+
+.custom-navbar .nav-link {
+  color: #969595;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link.active {
+  background-color: #D6D5D1;
+  color: #1c1c1c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.custom-navbar .auth-container {
+  margin-left: auto;
+}
+
+.custom-navbar .dropdown {
+  position: relative;
+  margin-left: auto;
+}
+
+.custom-navbar .dropdown-toggle {
+  background: none;
+  border: none;
+  color: #D6D5D1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative; /* Adiciona posição relativa para que a seta seja posicionada corretamente */
+}
+
+.custom-navbar .dropdown-toggle::after {
+  content: '\f107'; /* Unicode do ícone da seta para baixo */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 0.75rem;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #D6D5D1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000; /* Ajusta a elevação do z-index para que o dropdown esteja acima de outros elementos */
+  width: 120px;
+}
+
+.custom-navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.custom-navbar .dropdown-item {
+  padding: 10px 20px;
+  color: #1c1c1c;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background-color: rgba(96, 184, 130, 0.479);
+}
+
+.navbar-small {
+  padding: 10px 0;
+}
+
+.navbar-small .navbar-brand img {
+  width: 60px;
+  height: 21px;
+}
+
+.navbar-small .nav-link {
+  font-size: 0.9rem;
+}
+
+.navbar-small .dropdown-toggle {
+  font-size: 0.9rem;
+}
+
+body {
+  padding-top: 56px;
+}
+
+.custom-navbar .dropdown-toggle {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 15px;
+
+}
+
+.user-name {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.drop-icon-person {
+  margin-left: 10px; /* Alinha o ícone à direita */
+  margin-right: auto; /* Adiciona um espaço entre o ícone e o texto */
+  font-size: 1.2rem; /* Tamanho do ícone */
+}
+
+.drop-icon-exit {
+  margin-left: 23px; /* Alinha o ícone à direita */
+  margin-right: auto; /* Adiciona um espaço entre o ícone e o texto */
+  font-size: 1.2rem; /* Tamanho do ícone */
+}
+
+.nav-link2{
+  color: #D6D5D1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #2D6B51;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h2.user-name{
+  color: #696868;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+h2.user-name:hover{
+  transition: 0.5s;
+  color: #1c1c1c;
+}
+
+.nav-link1{
+  color: #D6D5D1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 10px;
+  background-color: #2D6B51;
+  border-radius: 5px;
+}
+
+.nav-link1:hover{
+  background-color: #47a57e;
+  color: #000000;
+}

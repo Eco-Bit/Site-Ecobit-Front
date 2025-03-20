@@ -1,0 +1,28 @@
+.home-button {
+    background-color: #c3a19a; /* Green */
+    border: none;
+    color: #1e1e1e;
+    padding: 3px;
+    padding-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+
+  .home-button:hover {
+    background-color: #bbadad;
+    transition: 0.5s;
+  }
+
+  .seta {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  

@@ -1,0 +1,69 @@
+.prod-detalhes-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 94vh;
+}
+
+.Prod_Detalhes {
+    flex: 1;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1000px; /* Ajuste conforme necessário */
+    margin: 50px auto;
+    background-color: #fff;
+}
+
+.prod-card-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Ajuste conforme necessário */
+}
+
+.prod-carousel-container {
+    flex-shrink: 0;
+    width: 380px; /* Ajuste conforme necessário */
+    height: 500px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.prod-carousel-container .carousel .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.prod-carousel-container .carousel .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste para que a imagem ocupe todo o espaço */
+}
+
+.text-container {
+    flex-grow: 1;
+    /* Ajustado para refletir o aumento da largura do carrossel */
+}
+
+.text-container h1 {
+    margin-top: 0;
+}
+
+.text-container p {
+    margin: 10px 0;
+}
+
+.text-container i {
+    margin-right: 5px;
+    color: rgb(9, 255, 0);
+}

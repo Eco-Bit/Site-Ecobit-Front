@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Estilização do footer */
+.footer {
+   background-color: #8b5e3c;
+   color: #ffffff;
+   font-family: Arial, sans-serif;
+   text-align: center; 
+   padding: 20px;/* Centralizando texto no footer */
+}
+
+.footer-content {
+   margin-left: -10px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footer-section {
+   margin-bottom: 20px;
+}
+
+.footer-section.about h1 {
+   font-size: 2em;
+   margin-bottom: 10px;
+}
+
+.footer-section.about p {
+   margin: 5px 0;
+}
+
+.footer-slogan {
+   font-style: italic; /* Estilizando o slogan em itálico */
+   font-family: 'Roboto Slab', serif; /* Aplicando a nova fonte */
+   font-size: 1.2em; /* Ajustando o tamanho da fonte */
+   padding-top: 5px;
+}
+
+.footer-social {
+   margin-top: 10px;
+}
+
+.footer-social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 15px; /* Espaço entre os ícones */
+   margin-bottom: 10px;
+}
+
+.footer-social-icons a {
+   color: #fff;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+   color: #ccc;
+}
+
+.footer-bottom {
+   text-align: center;
+   border-top: 1px solid #cccccc;
+   margin-top: 10px;
+}
+
+.footer-bottom p {
+   margin: 0;
+}

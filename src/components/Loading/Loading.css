@@ -1,0 +1,54 @@
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    width: 400px; /* Definindo a largura desejada */
+    height: 584px; /* Definindo a altura desejada */
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 20px;
+    flex-grow: 1;
+    position: relative; /* Adicionando posição relativa para que o Loading possa ser posicionado corretamente */
+}
+
+.map {
+    width: 100%; /* Alterando para ocupar 100% da largura do pai */
+    height: 100%; /* Alterando para ocupar 100% da altura do pai */
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container {
+    position: absolute; /* Alterando para posicionamento absoluto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Adapte a opacidade conforme necessário */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

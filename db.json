@@ -1,0 +1,20 @@
+{
+    "donations": [
+      {
+        "id": 1,
+        "name": "Doação de roupas",
+        "description": "Doação de roupas usadas em bom estado."
+      },
+      {
+        "id": 2,
+        "name": "Doação de alimentos",
+        "description": "Doação de alimentos não perecíveis."
+      },
+      {
+        "id": 3,
+        "name": "Doação de material escolar",
+        "description": "Doação de material escolar para crianças carentes."
+      }
+    ]
+  }
+  

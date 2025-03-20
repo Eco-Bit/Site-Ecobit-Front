@@ -1,0 +1,126 @@
+.bannerhomer {
+    width: 100%;
+    height: 30%;
+  }
+  .destaques {
+    width: auto;
+  }
+  .gridHome {
+    padding-left: 2%;
+    padding-top: 50px;
+  }
+  .imgdestaques {
+    width: 80%;
+  }
+  .gridHome {
+    display: flex;
+    padding-bottom: 50px;
+  }
+  .maisDoado {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .Home {
+    background-color: #f5f6f8;
+  }
+  .maisDoado p {
+    width: 90%;
+    text-align: justify;
+    margin: 10px;
+  }
+  .blocos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .blocos2 {
+    width: 100%;
+    display: flex;
+    padding-left: 70px;
+    margin-top: 50px;
+  }
+  .Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .text-icon {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+.eco{
+  padding: 20px;
+}
+.but-baixo{
+  margin: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  /* .texto-do-icon {
+  } */
+
+  @media screen and (max-width: 750px) {
+    .gridHome {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+    .maisDoado {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+    }
+    .imgdestaques {
+      width: 70%;
+    }
+    .blocos {
+      margin-top: 10px;
+      margin-left: 10%;
+    }
+
+  }
+
+  .about1 {
+    text-align: center;
+    padding: 40px 80px 80px;
+    background-color: #DCDDDE;
+  }
+  .about-header {
+    margin-bottom: 48px;
+  }
+  .about-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1e1e1e;
+  }
+  .about-description {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(30, 30, 30, 0.5);
+  }
+  .about-content {
+    display: flex;
+    gap: 20px;
+  }
+  .about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-image {
+    width: 96px;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  

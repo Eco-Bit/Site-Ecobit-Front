@@ -1,0 +1,132 @@
+.Donation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  padding: 0;
+  padding-top: 1.7vh;
+  padding-bottom: 50px;
+}
+
+.fora-app{
+  background-color: #ffffffec;
+}
+
+.app {
+  max-width: 100%;
+  background-image: url(../../img/background.avif);
+  background-size: contain, cover;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.headers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* Ocupa toda a largura da tela */
+  height: auto; /* Ajuste a altura conforme necessário */
+  margin-bottom: 50px;
+}
+
+#hearderProdutos{
+  width: auto;
+  height: auto; /* Mantém a proporção original da imagem */
+  max-height: 100%;
+  object-fit: contain; /* Mantém toda a imagem visível, sem cortes */
+  object-position: center;
+  display: block;
+}
+
+
+.headers p {
+  font-size: 1.5rem; /* Aumenta o tamanho do parágrafo */
+  color: #ffffff; /* Cor do texto */
+}
+
+.titles {
+  font-size: 3rem; /* Aumenta o tamanho do título */
+  margin-bottom: 10px;
+  font-weight: bold; /* Negrito para um visual mais forte */
+  color: #ffffff; /* Cor do texto */
+  text-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.NavLink {
+
+  background-color: #0F401F;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: auto; /* use auto to push it to the bottom */
+  cursor: pointer;
+  text-decoration: none;
+  align-self: center; /* ensure it is centered horizontally */
+}
+
+
+.NavLink:hover {
+  background-color: rgba(96, 184, 130, 0.479);
+  color: #25861c;
+}

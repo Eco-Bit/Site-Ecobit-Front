@@ -1,0 +1,257 @@
+.ProductForm-forms {
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.ProductForm-forms-container {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    padding: 20px;
+}
+
+.ProductForm-forms-header {
+    background-color: #25861c;
+    padding: 20px;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(154,152,147,1) 0%, rgba(45,107,81,1) 100%);
+}
+
+.ProductForm-forms-title {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.ProductForm-forms-form-group {
+    margin-bottom: 20px;
+}
+
+.ProductForm-forms-input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.ProductForm-forms-input-field-container {
+    display: inline-block;
+    width: calc(50% - 5px);
+    margin-right: 10px;
+}
+
+.ProductForm-forms-input-field-container:last-child {
+    margin-right: 0;
+}
+
+.ProductForm-forms-submit-btn {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0F401F;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.ProductForm-forms-submit-btn:hover {
+    background-color: rgba(96, 184, 130, 0.479);
+    color: #25861c;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+select::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder {
+    color: #6c757d;
+}
+
+select:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder {
+    color: #6c757d;
+}
+
+select::placeholder,
+input[type="number"]::placeholder {
+    color: #6c757d;
+}
+
+#descricao {
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    resize: none;
+}
+
+.ProductForm-forms-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ProductForm-forms-image-preview {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.ProductForm-forms-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProductForm-forms-remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ProductForm-forms-remove-button:hover {
+    background-color: rgb(173, 0, 0);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.ProductForm-forms-add-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #888;
+    text-align: center;
+}
+
+.ProductForm-forms-add-image:hover{
+    background-color:#dddfe2;
+}
+
+.ProductForm-forms-add-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ProductForm-forms-form h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.ProductForm-forms-form p{
+    text-align: end;
+    color: red;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal p {
+    margin: 0;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-icon {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.ProductForm-forms-form-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ProductForm-forms-input-field-telefone {
+    width: calc(70% - 10px); /* Ajusta a largura do input de celular */
+    margin-right: 10px;
+}
+
+.ProductForm-forms-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: green; /* Estiliza a cor do checkbox */
+    margin-right: 10px;
+}
+
+.ProductForm-forms-checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 20px;
+    display: none; /* Inicialmente oculta */
+}
