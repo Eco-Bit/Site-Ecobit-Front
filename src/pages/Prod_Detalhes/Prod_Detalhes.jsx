@@ -43,6 +43,15 @@ function Prod_Detalhes() {
     return <div className="error-message">{error}</div>;
   }
 
+  function formatarNumeroWhatsApp(numero) {
+    const apenasNumeros = numero.replace(/\D/g, "");
+    if (apenasNumeros.startsWith("55")) {
+      return apenasNumeros;
+    } else {
+      return `55${apenasNumeros}`;
+    }
+  }
+
   return (
     <div className="prod-detalhes-container">
       <EcoNav />
@@ -78,11 +87,19 @@ function Prod_Detalhes() {
               <p>Condição: {doacao.condicao}</p>
               <br></br>
               <p>Disponibilidade: {doacao.disponibilidade}</p>
-              <p>
-                <br></br>
-                <i className="fab fa-whatsapp" />
-                Contato: {doacao.telefone}
-              </p>
+              <a
+                href={`https://wa.me/${formatarNumeroWhatsApp(
+                  doacao.telefone
+                )}?text=${encodeURIComponent(
+                  `Olá, vi seu produto ${doacao.titulo} na Ecobit. Ainda está disponível?`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-link"
+              >
+                <i className="fab fa-whatsapp" style={{ marginRight: "8px" }} />
+                {doacao.telefone}
+              </a>
             </div>
           </div>
         </div>

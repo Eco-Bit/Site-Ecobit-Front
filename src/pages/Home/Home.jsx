@@ -2,7 +2,6 @@ import EcoNav from "../../components/Navbar/Navbar.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import "./Home.css";
 import Button from "../../components/HOME/Button/Button.jsx";
-import Icon from "../../components/HOME/Icons/Icons.jsx";
 import FloatingButton from "../../components/FloatingButton/FloatingButton.jsx";
 import { useEffect , useState } from "react";
 
@@ -164,7 +163,7 @@ function Home() {
         <div className="but-baixo">
         <Button path={"/Ecopontos"} />
         </div>
-        
+        {isLoggedIn ? <FloatingButton /> : ''}
       </section>
       <Footer />
     </div>

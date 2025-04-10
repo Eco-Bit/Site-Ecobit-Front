@@ -67,3 +67,18 @@
     margin-right: 5px;
     color: rgb(9, 255, 0);
 }
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .whatsapp-link:hover {
+    text-decoration: underline;
+  }
+  

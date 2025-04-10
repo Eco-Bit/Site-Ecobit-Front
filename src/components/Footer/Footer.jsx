@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div>
-          <p>+55 1199999-9999</p>
+          <p>+55 11 9 9999-9999</p>
           <p>contato@ecobit.com</p>
         </div>
         <div>

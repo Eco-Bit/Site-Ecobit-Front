@@ -97,7 +97,7 @@ function EcoNav() {
             {isLoggedIn ? (
               <div className="dropdown">
                 <button className="dropdown-toggle">
-                  <h2 className="user-name">{isAdmin ? "Administrador" : "Ola, " + userName}</h2>
+                  <h2 className="user-name">{isAdmin ? "Administrador" : "Olá, " + userName}</h2>
                 </button>
                 <div className="dropdown-menu">
                   <a href="/user/accountsettings" className="dropdown-item">
