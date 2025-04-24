@@ -1,4 +1,4 @@
-.Donation {
+#Donation {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@
   margin-bottom: 50px;
 }
 
-#hearderProdutos{
+#headerProdutos{
   width: auto;
   height: auto; /* Mantém a proporção original da imagem */
   max-height: 100%;

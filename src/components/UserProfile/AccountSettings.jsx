@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./AccountSettings.css";
 import InputMask from "react-input-mask";
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'; // Importe os ícones de check e times circle
-
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import Loading from "../Loading/Loading";
 
 const AccountSettings = () => {
   const { id } = useParams();
@@ -14,12 +14,13 @@ const AccountSettings = () => {
     email: "",
     endereco: "",
     cep: "",
-    senha: "",
   });
   const [isSuccessModalOpen, setSuccessModalOpen] = useState(false);
   const [isErrorModalOpen, setErrorModalOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [cepValid, setCepValid] = useState(true); // Estado para controlar se o CEP é válido
+  const [cepLoading, setCepLoading] = useState(false); // Estado para controlar o loading da consulta
 
   const toggleSuccessModal = () => {
     setSuccessModalOpen(!isSuccessModalOpen);
@@ -56,8 +57,42 @@ const AccountSettings = () => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
+  const handleCepBlur = async (e) => {
+    const cep = e.target.value.replace(/\D/g, '');
+    
+    if (cep.length !== 8) {
+      setCepValid(false);
+      return;
+    }
+
+    setCepLoading(true);
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = await response.json();
+      
+      if (data.erro) {
+        setCepValid(false);
+        setError("CEP não encontrado");
+        toggleErrorModal();
+      } else {
+        setCepValid(true);
+        setUserData(prev => ({
+          ...prev,
+          endereco: `${data.logradouro || ''}${data.logradouro && data.bairro ? ', ' + data.bairro : ''}`
+        }));
+      }
+    } catch (error) {
+      console.error("Erro ao consultar CEP:", error);
+      setCepValid(false);
+      setError("Erro ao consultar CEP");
+      toggleErrorModal();
+    } finally {
+      setCepLoading(false);
+    }
+  };
+
   const handleSave = async () => {
-    const {nome, telefone, email, endereco, cep, senha} = userData;
+    const {nome, telefone, email, endereco, cep} = userData;
     try {
       const chave = localStorage.getItem("id");
       if (!chave) {
@@ -72,6 +107,13 @@ const AccountSettings = () => {
         throw new Error("Preencha todos os campos obrigatórios");
       }
 
+      // Valida o CEP se foi preenchido
+      if (cep && !cepValid) {
+        setError("CEP inválido ou não encontrado");
+        toggleErrorModal();
+        return;
+      }
+
       const response = await fetch(
         `http://localhost:8080/updateUser/${chave}`,
         {
@@ -84,12 +126,11 @@ const AccountSettings = () => {
       );
 
       if (!response.ok) {
-        // mostrar modal de erro
         setError("Erro ao salvar os dados do usuário");
         toggleErrorModal();
         throw new Error("Erro ao atualizar os dados do usuário");
       }
-      // mostrar modal de sucesso
+      
       setMessage("Atualizações feitas com Sucesso!")
       toggleSuccessModal();
 
@@ -148,34 +189,29 @@ const AccountSettings = () => {
         </div>
 
         <div className="form-group">
+          <label htmlFor="cep">CEP</label>
+          <InputMask
+            mask="99999-999"
+            type="text"
+            name="cep"
+            id="cep"
+            value={userData.cep}
+            onChange={handleInputChange}
+            onBlur={handleCepBlur}
+          />
+          {cepLoading && <Loading />}
+          {!cepValid && userData.cep && !cepLoading && (
+            <span className="error-text">CEP inválido ou não encontrado</span>
+          )}
+        </div>
+
+        <div className="form-group">
           <label htmlFor="endereco">Endereço</label>
           <input
             type="text"
             name="endereco"
             id="endereco"
             value={userData.endereco}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="cep">CEP</label>
-          <input
-            type="text"
-            name="cep"
-            id="cep"
-            value={userData.cep}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="novaSenha">Nova Senha</label>
-          <input
-            type="password"
-            name="senha"
-            id="senha"
-            value={userData.senha}
             onChange={handleInputChange}
           />
         </div>
@@ -194,7 +230,6 @@ const AccountSettings = () => {
         </div>
       )}
 
-      {/* Modal de erro */}
       {isErrorModalOpen && (
         <div className="modal-overlay">
           <div className="modal-register">

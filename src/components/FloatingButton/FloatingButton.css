@@ -2,7 +2,12 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000; /* Garante que o botão flutuante esteja acima de outros elementos */
+  z-index: 1000;
+  transition: bottom 0.3s ease;
+}
+
+.floating-button-container.scrolled-to-bottom {
+  bottom: 200px;
 }
 
 .floating-button {
@@ -20,30 +25,30 @@
   justify-content: center;
   align-items: center; 
   transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
-  overflow: hidden; /* Esconde o texto fora dos limites do botão */
+  overflow: hidden;
   text-decoration: none;
   padding-left: 10px;
 }
 
 .floating-button:hover {
-  background-color: #68e478; /* Cor de fundo do botão quando passa o mouse sobre ele */
-  width: 160px; /* Largura do botão quando passa o mouse */
+  background-color: #68e478;
+  width: 160px;
   color: black;
   padding-right: 13.9px;
 }
 
 .floating-button-icon {
-  display: inline-block; /* Exibe o ícone em linha */
-  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+  display: inline-block;
+  transition: opacity 0.3s ease;
 }
 
 .floating-button-text {
-  margin-left: 10px; /* Espaço entre o ícone e o texto */
-  transition: display 0.3s ease; /* Transição suave para exibir o texto */
+  margin-left: 10px;
+  transition: display 0.3s ease;
 }
 
 .floating-button:hover .fab.fa-plus {
-  opacity: 0; /* Esconde o ícone ao passar o mouse */
+  opacity: 0;
 }
 
 .floating-button:hover .fa.fa-heart {
@@ -57,6 +62,6 @@
 
 .fa.fa-heart {
   padding-bottom: 28px;
-  display: none; /* Esconde o ícone por padrão */
+  display: none;
   color: red;
 }

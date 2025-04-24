@@ -24,7 +24,6 @@ function ProductForm() {
   const [categoria, setCategoria] = useState("");
   const [condicao, setCondicao] = useState("");
   const [disponibilidade, setDisponibilidade] = useState("");
-  const [telefone, setTelefone] = useState(""); // Novo estado para o telefone
   const [aceitoUsoTelefone, setAceitoUsoTelefone] = useState(false); // Novo estado para o checkbox
   const [error, setError] = useState("");
   const [handleButtonDisabled, setHandleButtonDisabled] = useState(false);
@@ -119,7 +118,10 @@ function ProductForm() {
   }
 
   function handleTelefoneChange(event) {
-    setTelefone(event.target.value);
+    setUserData(prev => ({
+      ...prev,
+      telefone: event.target.value
+    }));
   }
 
   function handleAceitoUsoTelefoneChange(event) {
@@ -151,7 +153,7 @@ function ProductForm() {
       categoria,
       condicao,
       disponibilidade,
-      telefone,
+      telefone: userData.telefone,
       imagensBase64,
     };
 
@@ -261,7 +263,7 @@ function ProductForm() {
                 id="telefone"
                 className="ProductForm-forms-input-field ProductForm-forms-input-field-telefone"
                 placeholder="Celular"
-                value={userData.telefone}
+                value={userData.telefone || ""}
                 onChange={handleTelefoneChange}
                 required
               />
